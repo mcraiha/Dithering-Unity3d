@@ -26,12 +26,14 @@ private static Color32 TrueColorToWebSafeColor(Color32 inputColor)
 DitheringBase method = new FloydSteinbergDithering(TrueColorToWebSafeColor);
 Texture2D dithered = method.DoDithering(input);[/code]
 ```
-First you have to have a color reduction function (in this case TrueColorToWebSafeColor). Then you create new instance of chosen algorithm (in this case FloydSteinbergDithering) and finally call DoDithering of dithering instance with chosen input Texture2D. It then returns the dithered Texture2D.
+First you have to have a color reduction function (in this case **TrueColorToWebSafeColor**). Then you create new instance of chosen algorithm (in this case **FloydSteinbergDithering**) and finally call DoDithering of dithering instance with chosen input Texture2D. It then returns the dithered Texture2D.
 
 ##Sample image
 I took the famous [parrot image](http://r0k.us/graphics/kodak/kodim23.html) and reduced its size to 384x256. Then I ran the image (which has 64655 different colors) with all dithering methods and using Web safe colors as palette. I also calculated PSNR and SSIM values for dithered images.
 
 Resized image has filesize of 244 kB as PNG. All dithered files have filesize between 63-70 kB.
 
+![Parrots](https://github.com/mcraiha/Dithering-Unity3d/blob/master/birds.png)
+
 ##.NET version
-If you same functionality as .NET versio, then head to https://github.com/mcraiha/CSharp-Dithering
+If you need same functionality as .NET version, then head to https://github.com/mcraiha/CSharp-Dithering
