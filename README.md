@@ -24,12 +24,12 @@ private static Color32 TrueColorToWebSafeColor(Color32 inputColor)
 }
 
 DitheringBase method = new FloydSteinbergDithering(TrueColorToWebSafeColor);
-Texture2D dithered = method.DoDithering(input);[/code]
+Texture2D dithered = method.DoDithering(input);
 ```
 First you have to have a color reduction function (in this case **TrueColorToWebSafeColor**). Then you create new instance of chosen algorithm (in this case **FloydSteinbergDithering**) and finally call DoDithering of dithering instance with chosen input Texture2D. It then returns the dithered Texture2D.
 
 ## License
-Text in this document and source code files are released into the public domain. See [PUBLICDOMAIN](https://github.com/mcraiha/CSharp-Dithering/blob/master/PUBLICDOMAIN) file.
+Text in this document and source code files are released into the public domain. See [PUBLICDOMAIN](https://github.com/mcraiha/Dithering-Unity3d/blob/master/PUBLICDOMAIN) file.
 
 Parrot image (half.png) is made from image that comes from [Kodak Lossless True Color Image Suite](http://r0k.us/graphics/kodak/) and it doesn't have any specific license.
 
